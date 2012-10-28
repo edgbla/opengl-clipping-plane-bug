@@ -1,0 +1,11 @@
+uniform vec4 OGL2Param;
+uniform sampler2D OGL2Texture;
+varying vec2 TCoord;
+
+void main()
+{
+	vec4 col;
+	col = texture2D(OGL2Texture, TCoord);
+	col += OGL2Param.zzzz / 16.0;
+	gl_FragColor = col;
+}

@@ -1,0 +1,8 @@
+uniform vec4 OGL2Param;
+varying vec2 TCoord;
+
+void main()
+{
+	gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+	TCoord = gl_MultiTexCoord0.xy;
+}
